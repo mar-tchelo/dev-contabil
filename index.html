@@ -15,33 +15,37 @@
 <body>
     <div class="caixa-superior">
         <div class="cabecalho">
-            <h2 class="titulo-cabecalho"> Dev Contábil</h2>
-            <a href="#" class="link-cabecalho">Quem somos</a>
-            <a href="#" class="link-cabecalho">Serviços</a>
-            <a href="#" class="link-cabecalho">Contatos</a>
+            <h2  class="titulo-cabecalho"> Dev Contábil</h2>
+            <a href="#titulo-inferior" class="link-cabecalho">Quem somos</a>
+            <a href="#titulo-meio" class="link-cabecalho">Serviços</a>
+            <a href="#" class="link-cabecalho" onclick="contato()" >Contato</a>
         </div>
         <h1>Dev Contábil</h1>
 
-        <form action="">
+        <form id="formulario-contato" action="https://formsubmit.co/marcelo.js10@gmail.com" method="POST">
             <h3 class="titulo-formulario">Entre em contato</h3>
 
+            <input type="hidden" name="_next" value="http://127.0.0.1:5500/">
+
             <label for="name">Nome
-                <input type="text" id="name" placeholder="Seu nome">
+                <input type="text" id="name" placeholder="Seu nome" required>
             </label>
 
             <label for="email">Email
-                <input type="email" id="email" placeholder="seuemail@gmail.com">
+                <input type="email" id="email" placeholder="seuemail@gmail.com" required>
             </label>
 
-            <label for="area">Fale com nosco
-                <textarea placeholder="Qual sua duvida?" name="area" id="area" cols="30" rows="10"></textarea>
+            <label for="info">Fale com nosco
+                <textarea placeholder="Qual sua duvida?" name="info" id="area" cols="30" rows="10" required></textarea>
             </label>
 
-            <button>Enviar</button>
+            
+
+            <button type="submit">Enviar</button>
         </form>
     </div>
 
-    <h2 class="titulo-meio">Nossos serviços</h2>
+    <h2 id="titulo-meio">Nossos serviços</h2>
 
     <div class="caixa-central">      
 
@@ -84,7 +88,7 @@
 
     <div class="caixa-inferior">
 
-        <h2 class="titulo-inferior">Sobre nós</h2>
+        <h2 id="titulo-inferior">Sobre nós</h2>
         <p class="paragrafo-inferior">Estamos presente no mercado há mais de 4 décadas auxiliando nossos clientes nacionais e internacionais que já
             atuam ou desejam abrir seus negócios e ingressar no Brasil.
 
@@ -101,6 +105,8 @@
             sugerindo incorporação ou desmembramento de atividades.
         </p>
     </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
